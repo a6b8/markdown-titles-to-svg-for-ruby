@@ -8,9 +8,9 @@ require 'json'
 require 'zip/zip'
 
 
-require_relative "markdown_headlines_to_svg/version"
+require_relative "markdown_titles_to_svg/version"
 
-module MarkdownHeadlinesToSvg
+module MarkdownTitlesToSvg
   class Error < StandardError; end
 
   @TEMPLATE=  {
