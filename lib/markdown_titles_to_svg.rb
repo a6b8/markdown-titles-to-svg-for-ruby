@@ -22,7 +22,7 @@ module MarkdownTitlesToSvg
       text_align: :left,
       bold: false,
       mode: {
-        h1: :local,
+        h1: :google_fonts,
         default: :google_fonts
       },
       local: {
@@ -103,13 +103,13 @@ module MarkdownTitlesToSvg
         FileUtils.mkdir_p ( File.dirname( cmd[:path] ) )
         File.open( cmd[:path], "w" ) { | f | f.write( svg ) }
       end
-    end
 
-    obj[:font][:mode].keys.each do | key |
-      if obj[:font][:mode][ key ] == :google_fonts
-        if ( Time.now.getutc.to_i - obj[:font][:current][ key ].split( '-' )[ 1 ].to_i ) < 30
-          if File.basename( obj[:font][:current][ key ] ) .start_with?( key.to_s )
-            File.delete( obj[:font][:current][ key ] )
+      obj[:font][:mode].keys.each do | key |
+        if obj[:font][:mode][ key ] == :google_fonts
+          if ( Time.now.getutc.to_i - obj[:font][:current][ key ].split( '-' )[ 1 ].to_i ) < 30
+            if File.basename( obj[:font][:current][ key ] ) .start_with?( key.to_s )
+              File.delete( obj[:font][:current][ key ] )
+            end
           end
         end
       end
