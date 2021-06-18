@@ -3,7 +3,7 @@ require 'text2svg'
 require 'nokogiri'
 require 'net/http'
 require 'fileutils'
-require 'active_support/core_ext/hash/indifferent_access'
+# require 'active_support/core_ext/hash/indifferent_access'
 require 'json'
 require 'zip/zip'
 
@@ -20,37 +20,67 @@ module MarkdownTitlesToSvg
     },
     font: {
       text_align: :left,
-      bold: true,
-      local: false,
-      source: {
-        local_path: '',
-        google_fonts: {
+      bold: false,
+      mode: {
+        h1: :local,
+        default: :google_fonts
+      },
+      local: {
+        h1: '/Library/Fonts/Microsoft/Corbel Bold.ttf',
+        default: '/Library/Fonts/Microsoft/Consolas.ttf'
+      },
+      google_fonts: {
+        h1: {
+          name: 'Oswald',
+          variant: 'regular',
+          subset: 'latin'         
+        },
+        default: {
           name: 'Amatic SC',
           variant: 'regular',
-          subset: 'latin'
-        },
-        current: nil,
+          subset: 'latin'              
+        } 
+      },
+      current: {
+        h1: nil,
+        default: nil
       }
     },
     view: {
       offset: {
-        height: -800,
+        height: 0,
         widht: 0
       }
     },
     style: {
-      color: {
-        opacity: 1.0,
-        default: '#A5834B',
-        palette: []
+      h1: {
+        color: {
+          opacity: 1.0,
+          default: '#A5834B',
+          palette: []
+        },
+        stroke: {
+          color: 'none',
+          width: '0px',
+          opacity: 1.0,
+          linecap: 'butt'
+        }
       },
-      stroke: {
-        color: 'none',
-        width: '10px',
-        opacity: 1.0,
-        linecap: 'butt'
+      default: {
+        color: {
+          opacity: 1.0,
+          default: '#A5834B',
+          palette: []
+        },
+        stroke: {
+          color: 'none',
+          width: '0px',
+          opacity: 1.0,
+          linecap: 'butt'
+        }
       }
-    }
+    },
+    silent: false
   }
 
 
@@ -63,41 +93,64 @@ module MarkdownTitlesToSvg
     if self.validate( markdowns, gh_name, options, @TEMPLATE )
       obj = self.options_update( options, @TEMPLATE, 'set_options' )
       obj[:github][:profile] = gh_name
-
-      if obj[:font][:source][:user].nil?
-        obj[:font][:source][:current] = obj[:font][:source][:default]
-      else
-        obj[:font][:source][:current] = obj[:font][:source][:user]
-      end
-
-      if obj[:font][:local] 
-        obj[:font][:source][:current] = obj[:font][:source][:local_path]
-      else
-        obj[:font][:source][:current] = "./tmp-#{Time.now.getutc.to_i}.ttf"
-        google_font_download( 
-          obj[:font][:source][:google_fonts][:name], 
-          obj[:font][:source][:google_fonts][:variant], 
-          obj[:font][:source][:google_fonts][:subset], 
-          obj[:font][:source][:current]
-        )
-      end
+      obj = self.set_fonts( obj )
 
       cmds = self.markdowns_read( markdowns, obj )
+
       root = './'
       cmds.each do | cmd |
-        svg = self.svg_generate( cmd[:headline], obj )
+        svg = self.svg_generate( cmd, obj )
         FileUtils.mkdir_p ( File.dirname( cmd[:path] ) )
         File.open( cmd[:path], "w" ) { | f | f.write( svg ) }
       end
     end
 
-    !obj[:font][:local] ? File.delete( obj[:font][:source][:current] ) : ''
+    obj[:font][:mode].keys.each do | key |
+      if obj[:font][:mode][ key ] == :google_fonts
+        if ( Time.now.getutc.to_i - obj[:font][:current][ key ].split( '-' )[ 1 ].to_i ) < 30
+          if File.basename( obj[:font][:current][ key ] ) .start_with?( key.to_s )
+            File.delete( obj[:font][:current][ key ] )
+          end
+        end
+      end
+    end
 
     return true
   end
 
 
   private
+
+
+  def self.set_fonts( obj )
+    types = obj[:font][:mode].keys
+    behaviours = types.map { | key | obj[:font][:mode][ key ] }
+
+    !obj[:silent] ? puts( 'Used Fonts: ' ) : ''
+    behaviours.each.with_index do | behaviour, index |
+      t = types[ index ].to_s.length < 3 ? "\t\t" : "\t"
+      !obj[:silent] ? print( "  :#{types[ index ].to_s}#{t}> " ) : ''
+      case behaviour
+        when :local
+          obj[:font][:current][ types[ index ] ] = obj[:font][:local][ types[ index ] ]
+          tmp = File.basename( obj[:font][:current][ types[ index ] ] )
+          !obj[:silent] ? print( "#{tmp} (Local)" ) : ''
+        when :google_fonts
+          obj[:font][:current][ types[ index ] ] = "./#{types[ index ].to_s}-#{Time.now.getutc.to_i}.ttf"
+          self.google_font_download( 
+            obj[:font][:google_fonts][ types[ index ] ][:name], 
+            obj[:font][:google_fonts][ types[ index ] ][:variant], 
+            obj[:font][:google_fonts][ types[ index ] ][:subset], 
+            obj[:font][:current][ types[ index ] ],
+            types[ index ],
+            obj[:silent]
+          )
+      end
+      !obj[:silent] ? puts : ''
+    end
+
+    return obj
+  end
 
 
   def self.str_difference( a, b )
@@ -113,7 +166,7 @@ module MarkdownTitlesToSvg
   end
 
 
-  def self.google_font_download( font, style, subset, file_name )    
+  def self.google_font_download( font, style, subset, file_name, type, silent )    
     def self.unzip_file( file, destination, file_name )
       Zip::ZipFile.open( file ) do | zip_file |
        zip_file.each do | f |
@@ -144,7 +197,7 @@ module MarkdownTitlesToSvg
       .map { | a | { name: a, score: self.str_difference( style.to_s, a.to_s ) } }
       .min_by { | h | h[:score] }
   
-    puts "Font: #{font["id"]} #{variant[:name]} (#{subset})"
+    !silent ? print( "#{font["id"]} #{variant[:name]} #{subset} (Google Fonts)" ) : ''
     
     url = ''
     url += server
@@ -170,7 +223,7 @@ module MarkdownTitlesToSvg
       other: []
     }
 
-    begin
+    #begin
       if markdowns.class.to_s.eql? 'Array'
         if markdowns.map { | a | a.start_with?( template[:github][:source] ) }.all?
           if markdowns.map { | a | a.end_with?( '.md' ) }.all?
@@ -196,14 +249,14 @@ module MarkdownTitlesToSvg
       end
 
       if vars.class.to_s == 'Hash'
-        messages[:options] = self.options_update( vars, template, 'options_valid?' )
+        messages[:options] = self.options_update( vars, template, 'check_options' )
       else
         messages[:options].push( 'Is not Type "Hash".') 
       end
 
-    rescue
-      messages[:other].push( "Undefined error occured.")
-    end
+    #rescue
+      #messages[:other].push( "Undefined error occured.")
+    #end
 
     valid = messages.keys.map { | key | messages[ key ].length }.sum == 0
 
@@ -225,23 +278,34 @@ module MarkdownTitlesToSvg
 
 
   def self.options_update( vars, template, mode )
-    allow_list =     [
+    allow_list = [
+      :github__source,
       :font__text_align,
       :font__bold,
-      :font__local,
-      :font__source__local_path,
-      :font__source__google_fonts__name,
-      :font__source__google_fonts__variant,
-      :font__source__google_fonts__subset,
+      :font__mode__h1,
+      :font__mode__default,
+      :font__google_fonts__h1__name,
+      :font__google_fonts__h1__variant,
+      :font__google_fonts__h1__subset,
+      :font__google_fonts__default__name,
+      :font__google_fonts__default__variant,
+      :font__google_fonts__default__subset,
       :view__offset__height,
       :view__offset__widht,
-      :style__color__opacity,
-      :style__color__default,
-      :style__color__palette,
-      :style__stroke__color,
-      :style__stroke__width,
-      :style__stroke__opacity,
-      :style__stroke__linecap
+      :style__h1__color__opacity,
+      :style__h1__color__default,
+      :style__h1__color__palette,
+      :style__h1__stroke__color,
+      :style__h1__stroke__width,
+      :style__h1__stroke__opacity,
+      :style__h1__stroke__linecap,
+      :style__default__color__opacity,
+      :style__default__color__default,
+      :style__default__color__palette,
+      :style__default__stroke__color,
+      :style__default__stroke__width,
+      :style__default__stroke__opacity, 
+      :style__default__stroke__linecap,
     ]
 
     messages = []
@@ -274,7 +338,7 @@ module MarkdownTitlesToSvg
     
     result = nil
     case mode
-      when 'options_valid?'
+      when 'check_options'
         result = messages
       when 'set_options'
         result = _options
@@ -301,8 +365,8 @@ module MarkdownTitlesToSvg
   end
 
 
-  def self.svg_items_decode( str, elements, obj )
-    def self.svg_item( char, color, element, obj )
+  def self.svg_items_decode( cmd, elements, obj )
+    def self.svg_item( char, color, element, obj, cmd )
       item = {
         "character": nil,
         "fill": nil,
@@ -317,11 +381,11 @@ module MarkdownTitlesToSvg
 
       item[:"character"] = char
       item[:"fill"] = color
-      item[:"fill-opacity"] = obj[:style][:color][:opacity]
-      item[:"stroke"] = obj[:style][:stroke][:color]
-      item[:"stroke-width"] = obj[:style][:stroke][:width]
-      item[:"stroke-linecap"] = obj[:style][:stroke][:linecap]
-      item[:"stroke-opacity"] = obj[:style][:stroke][:opacity]
+      item[:"fill-opacity"] = obj[:style][ cmd[:type] ][:color][:opacity]
+      item[:"stroke"] = obj[:style][ cmd[:type] ][:stroke][:color]
+      item[:"stroke-width"] = obj[:style][ cmd[:type] ][:stroke][:width]
+      item[:"stroke-linecap"] = obj[:style][ cmd[:type] ][:stroke][:linecap]
+      item[:"stroke-opacity"] = obj[:style][ cmd[:type] ][:stroke][:opacity]
   
       [ :"transform", :"d" ].each do | key |
         search = key.to_s
@@ -333,16 +397,16 @@ module MarkdownTitlesToSvg
     end
     
     
-    characters = str.gsub( ' ', '' )
+    characters = cmd[:headline].gsub( ' ', '' )
     items = []
     elements.each.with_index do | element, index |
-      if obj[:style][:color][:palette].length <= index
-        color = obj[:style][:color][:default]
+      if obj[:style][ cmd[:type] ][:color][:palette].length <= index
+        color = obj[:style][ cmd[:type] ][:color][:default]
       else
-        color = obj[:style][:color][:palette][ index ]
+        color = obj[:style][ cmd[:type] ][:color][:palette][ index ]
       end
       
-      item = self.svg_item( characters[ index ], color, element, obj )
+      item = self.svg_item( characters[ index ], color, element, obj, cmd )
       items.push( item )
     end
     return items
@@ -381,16 +445,16 @@ module MarkdownTitlesToSvg
   end
 
 
-  def self.svg_generate( str, obj )
+  def self.svg_generate( cmd, obj )
     svg = Text2svg( 
-      str, 
-      font: obj[:font][:source][:current], 
+      cmd[:headline], 
+      font: obj[:font][:current][ cmd[:type] ], 
       text_align: obj[:font][:text_align], 
       bold: obj[:font][:bold]
     ).to_s
   
     elements = self.svg_elements( svg )
-    items = self.svg_items_decode( str, elements, obj )
+    items = self.svg_items_decode( cmd, elements, obj )
     code = self.svg_create_code( items, svg, obj )
     return code
   end
@@ -406,10 +470,11 @@ module MarkdownTitlesToSvg
         doc = Nokogiri::HTML( response )
         doc.xpath( '//img' ).each do | element |
           begin
-            if !element.attribute( 'banner' ).nil?
+            if !element.attribute( 'alt' ).nil?
               validation = "#{obj[:github][:source]}#{obj[:github][:profile]}/"
               cmd = {
                 headline: nil,
+                type: nil,
                 src: nil,
                 file: nil,
                 path: nil
@@ -421,8 +486,11 @@ module MarkdownTitlesToSvg
               if cmd[:src].start_with?( validation )
                 if cmd[:src].end_with?( '.svg' ) 
                   if url =~ URI::regexp
-                    cmd[:headline] = element.attribute( 'banner' ).value
-                    
+                    cmd[:headline] = element.attribute( 'alt' ).value
+
+                    cmd[:type] = cmd[:headline].count( '#' ) == 0 ? :default : :h1
+                    cmd[:headline] = cmd[:headline].gsub( '#', '' ).strip
+
                     tmp = cmd[:src][ cmd[:src].index( validation ) + validation.length, cmd[:src].length ]
                     tmp = tmp
                       .split( '/' )
