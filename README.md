@@ -121,6 +121,14 @@ Please use https://google-webfonts-helper.herokuapp.com/fonts to find your favor
 
 <br>
 <br>
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/limitations.svg" height="55px" alt="Limitations">
+
+- Font Type are limited to '.ttf' and '.otf'. 
+- Read only Markdown Files from Github.
+<br>
+<br>
+<br>
+
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/contributing.svg" height="55px" alt="Contributing">
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/a6b8/statosio-for-wordpress. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/a6b8/statosio/blob/master/CODE_OF_CONDUCT.md).
