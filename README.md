@@ -42,16 +42,15 @@ Or install it yourself as:
     $ gem install markdown_headlines_to_svg
 <br>
 <br>
-
-## Process
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/process.svg" height="55px" alt="Process">
 
 1. Define Markdowns
 ```ruby
     mds = [ FILE1, FILE2 ]
     markdown_headlines_to_svg.generate(
         mds,
-        github_profile,
-        {}
+        "github_profile_name",
+        options = {}
     )
 
 ```
@@ -61,18 +60,18 @@ Or install it yourself as:
 
     FILE1                                                         QUEUE
     ------------------------------------------------------        
-    |  <img src="../a/c/d/1.svg" alt="# Headline 1"> ----|------> [ 0 ] 
+    |  <img src="../a/c/d/1.svg" alt="# Headline 1" ----|------> [ 0 ] 
     |                                                    |        
     |    FILE2                                           |        
     |    -----------------------------------------------------   
-    |    |  <img src="../b/c/d/1.svg" alt="# Headline 2"> ---|->  [ 1 ] 
+    |    |  <img src="../b/c/d/1.svg" alt="# Headline 2" ---|->  [ 1 ] 
     |    |  ...                                              |   
-    |    |  <img src="../c/d/e/2.svg" alt="Title 1"> --------|->  [ 2 ] 
+    |    |  <img src="../c/d/e/2.svg" alt="Title 1" --------|->  [ 2 ] 
     |    |  ...                                              |   
 
-    [ 0 ] { text: 'Headline 1', type: :h1, path: '../a/c/d/1.svg' }
-    [ 1 ] { text: 'Headline 2', type: :h1, path: '../b/c/d/1.svg' }
-    [ 2 ] { text: 'Title 1', type: :default, path: '../c/d/e/2.svg' }
+    [ 0 ] { text: 'Headline 1', type: :h1, output: '../a/c/d/1.svg' }
+    [ 1 ] { text: 'Headline 2', type: :h1, output: '../b/c/d/1.svg' }
+    [ 2 ] { text: 'Title 1', type: :default, output: '../c/d/e/2.svg' }
 ```
 
 3. Add Style and Font Options
@@ -83,7 +82,7 @@ Or install it yourself as:
 {                                   |
     type: :h1, ---------------------|------------------                        
     text: 'Headline 1',             |                 |
-    path: '../a/c/d/1.svg',         V                 V
+    output: '../a/c/d/1.svg',         V                 V
     style: <-------------------- options[ :style ][ :h1 ]
     font: <---------------------- options[ :font ][ :h1 ]
 },
@@ -94,7 +93,10 @@ Or install it yourself as:
 
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/functions.svg" height="55px" alt="Functions">
 
-Test
+get_options()
+
+
+
 <br>
 <br>
 <br>
