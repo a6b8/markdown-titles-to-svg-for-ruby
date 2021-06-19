@@ -45,7 +45,7 @@ Or install it yourself as:
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/process.svg" height="55px" alt="Process">
 
 1. Run Command
-```ruby
+```txt
     mds = [ PATH_FILE1, PATH_FILE2 ]
     markdown_headlines_to_svg.generate(
         mds,
@@ -56,7 +56,7 @@ Or install it yourself as:
 ```
 
 2. Prepare (Import) Font
-```txt
+``` txt
            :h1          :default
             |              |
             | mode         | mode
@@ -67,7 +67,7 @@ Or install it yourself as:
 ```
 
 3. Scrape Titles
-```txt
+``` txt
 
     MD_FILE_ 1                                                    QUEUE
     ------------------------------------------------------        
@@ -87,7 +87,7 @@ Or install it yourself as:
 
 4. Add Style and Font Options
 
-``` ruby                         
+``` txt                       
                                  default
                                  + user options
 {                                   |
