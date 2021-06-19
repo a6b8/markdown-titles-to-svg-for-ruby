@@ -25,7 +25,7 @@ MarkdownTitlesToSvg.generate(
 ```
 <br>
 <br>
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/installation.svg" height="55px" alt="Installation">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/setup.svg" height="55px" alt="Setup">
 
 Add this line to your application's Gemfile:
 
@@ -60,13 +60,13 @@ Or install it yourself as:
 
     FILE1                                                         QUEUE
     ------------------------------------------------------        
-    |  <img src="../a/c/d/1.svg" alt="# Headline 1" ----|------> [ 0 ] 
+    |  img src="../a/c/d/1.svg" alt="# Headline 1" ----|------> [ 0 ] 
     |                                                    |        
     |    FILE2                                           |        
     |    -----------------------------------------------------   
-    |    |  <img src="../b/c/d/1.svg" alt="# Headline 2" ---|->  [ 1 ] 
+    |    |  img src="../b/c/d/1.svg" alt="# Headline 2" ---|->  [ 1 ] 
     |    |  ...                                              |   
-    |    |  <img src="../c/d/e/2.svg" alt="Title 1" --------|->  [ 2 ] 
+    |    |  img src="../c/d/e/2.svg" alt="Title 1" --------|->  [ 2 ] 
     |    |  ...                                              |   
 
     [ 0 ] { text: 'Headline 1', type: :h1, output: '../a/c/d/1.svg' }
