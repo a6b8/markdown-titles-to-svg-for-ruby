@@ -42,6 +42,26 @@ Or install it yourself as:
     $ gem install markdown_headlines_to_svg
 <br>
 <br>
+
+## Process
+
+1. Find Titles
+``` bash
+
+MD FILE1                                                   :  QUE
+---------------------------------------------------        :
+<img src="../a/c/d/1.svg" alt="# Headline"> ------|------> : [ 0 ]
+                                                  |        :
+    MD FILE2                                      |        :
+    ----------------------------------------------------   :
+    | <img src="../b/c/d/1.svg" alt="# Headline"> -----|-> : [ 1 ]
+    | ...                                              |   :
+    | <img src="../b/c/d/2.svg" alt="Title 1"> --------|-> : [ 2 ]
+    | ...                                              |   :
+```
+
+2. Download Prepare Fonts
+
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/functions.svg" height="55px" alt="Functions">
 
 Test
