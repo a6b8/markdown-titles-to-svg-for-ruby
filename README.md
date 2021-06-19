@@ -25,8 +25,8 @@ MarkdownTitlesToSvg.generate(
 ```
 <br>
 <br>
-<br>
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/installation.svg" height="55px" alt="Installation">
+
 Add this line to your application's Gemfile:
 
 ```ruby
@@ -63,13 +63,13 @@ Test
 | B.3. | Mode H1 |:font__mode__h1 | `google_fonts` | Symbol | |
 | B.4. | Mode Default |:font__mode__default | `google_fonts` | Symbol | |
 
-#### Import Local Font
+#### Import from Local
 | Nr | Name | Key | Default | Type | Description |
 | :-- | :-- | :-- | :-- | :-- | :-- |
 | B.5. | H1 |:font__local__h1 | `"/Library/Fonts/Microsoft/Corbel Bold.ttf"` | String | |
 | B.6. | Default |:font__local__default | `"/Library/Fonts/Microsoft/Consolas.ttf"` | String | |
 
-#### Import from Google Fonts
+#### Import from "Google Fonts"
 | Nr | Name | Key | Default | Type | Description |
 | :-- | :-- | :-- | :-- | :-- | :-- |
 | B.7. | H1 Name |:font__google_fonts__h1__name | `"Oswald"` | String | |
@@ -79,6 +79,7 @@ Test
 | B.11. | Default Variant |:font__google_fonts__default__variant | `"regular"` | String | |
 | B.12. | Default Subset |:font__google_fonts__default__subset | `"latin"` | String | |
 
+Please use https://google-webfonts-helper.herokuapp.com/fonts to find your favorite Font.
 
 ### View
 | Nr | Name | Key | Default | Type | Description |
