@@ -48,25 +48,24 @@ Or install it yourself as:
 1. Find Titles
 ``` bash
 
-MD FILE1                                                   |  TITLES
----------------------------------------------------        |
-<img src="../a/c/d/1.svg" alt="# Headline 1"> ----|------> | [ 0 ] 
-                                                  |        |
-    MD FILE2                                      |        |
-    ----------------------------------------------------   |
-    | <img src="../b/c/d/1.svg" alt="# Headline 2"> ---|-> | [ 1 ] 
-    | ...                                              |   |
-    | <img src="../c/d/e/2.svg" alt="Title 1"> --------|-> | [ 2 ] 
-    | ...                                              |   |
+MD FILE1                                                    TITLES
+---------------------------------------------------        
+<img src="../a/c/d/1.svg" alt="# Headline 1"> ----|------>  [ 0 ] 
+                                                  |        
+    MD FILE2                                      |        
+    ----------------------------------------------------   
+    | <img src="../b/c/d/1.svg" alt="# Headline 2"> ---|->  [ 1 ] 
+    | ...                                              |   
+    | <img src="../c/d/e/2.svg" alt="Title 1"> --------|->  [ 2 ] 
+    | ...                                              |   
+```
 
-TITLES
+2. Add Parameters
+
+``` bash
 [ 0 ] { text: 'Headline 1', type: :h1, path: '../a/c/d/1.svg' }
 [ 1 ] { text: 'Headline 2', type: :h1, path: '../b/c/d/1.svg' }
 [ 2 ] { text: 'Title 1', type: :default, path: '../c/d/e/2.svg' }
-
-```
-
-``` bash
 
 
 ```
