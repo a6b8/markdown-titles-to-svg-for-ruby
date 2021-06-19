@@ -25,6 +25,19 @@ MarkdownTitlesToSvg.generate(
 ```
 <br>
 <br>
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/demo.svg" height="55px" alt="Demo">
+
+**A. Implemention**
+> https://raw.githubusercontent.com/a6b8/a6b8/main/README.md
+
+
+**B. Execution**
+> https://github.com/a6b8/a6b8/blob/main/titles.sh
+
+
+
+<br>
+<br>
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/setup.svg" height="55px" alt="Setup">
 
 Add this line to your application's Gemfile:
@@ -112,7 +125,7 @@ Or install it yourself as:
     # => { github: { profile: nil, ...
 ```
 
-### .get_options()
+### .generate()
 
 ```ruby
     MarkdownTitlesToSvg.generate(
