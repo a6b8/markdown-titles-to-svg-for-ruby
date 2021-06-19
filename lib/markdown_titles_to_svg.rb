@@ -61,7 +61,7 @@ module MarkdownTitlesToSvg
         },
         stroke: {
           color: 'none',
-          width: '0px',
+          width: '0',
           opacity: 1.0,
           linecap: 'butt'
         }
@@ -74,7 +74,7 @@ module MarkdownTitlesToSvg
         },
         stroke: {
           color: 'none',
-          width: '0px',
+          width: '0',
           opacity: 1.0,
           linecap: 'butt'
         }
