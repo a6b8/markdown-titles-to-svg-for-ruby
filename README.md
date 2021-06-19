@@ -45,37 +45,41 @@ Or install it yourself as:
 
 ## Process
 
-1. Find Titles
+1. Define Markdowns
 ```ruby
 
-MD FILE1                                                    TITLES
----------------------------------------------------        
-<img src="../a/c/d/1.svg" alt="# Headline 1"> ----|------>  [ 0 ] 
-                                                  |        
-    MD FILE2                                      |        
-    ----------------------------------------------------   
-    | <img src="../b/c/d/1.svg" alt="# Headline 2"> ---|->  [ 1 ] 
-    | ...                                              |   
-    | <img src="../c/d/e/2.svg" alt="Title 1"> --------|->  [ 2 ] 
-    | ...                                              |   
+```
+
+2. Scrape Titles
+```ruby
+
+    MD FILE1                                                    QUE
+    ------------------------------------------------------        
+    |  <img src="../a/c/d/1.svg" alt="# Headline 1"> ----|------>  [ 0 ] 
+    |                                                    |        
+    |    MD FILE2                                        |        
+    |    -----------------------------------------------------   
+    |    |  <img src="../b/c/d/1.svg" alt="# Headline 2"> ---|->  [ 1 ] 
+    |    |  ...                                              |   
+    |    |  <img src="../c/d/e/2.svg" alt="Title 1"> --------|->  [ 2 ] 
+    |    |  ...                                              |   
 
 [ 0 ] { text: 'Headline 1', type: :h1, path: '../a/c/d/1.svg' }
 [ 1 ] { text: 'Headline 2', type: :h1, path: '../b/c/d/1.svg' }
 [ 2 ] { text: 'Title 1', type: :default, path: '../c/d/e/2.svg' }
 ```
 
-1. Add Style and Font Options
+3. Add Style and Font Options
 
 ``` ruby                      
-[ 0 ] 
-{        
+[ 0 ] {        
     type: :h1, ---------------------------------------                        
     text: 'Headline 1',                              |
     path: '../a/c/d/1.svg',                          V
     style: <-------------------- options[ :style ][ :h1 ]
-    font: <--------------------- options[ :font ][ :h1 ]
+    font: <---------------------- options[ :font ][ :h1 ]
 },
-{ ...
+[ 1 ] { ...
 
 ```
 
