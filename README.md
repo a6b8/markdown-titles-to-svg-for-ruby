@@ -44,7 +44,7 @@ Or install it yourself as:
 <br>
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/process.svg" height="55px" alt="Process">
 
-1. Define Markdowns
+1. Run Command
 ```ruby
     mds = [ PATH_FILE1, PATH_FILE2 ]
     markdown_headlines_to_svg.generate(
@@ -55,8 +55,19 @@ Or install it yourself as:
 
 ```
 
-2. Scrape Titles
-```ruby
+2. Prepare (Import) Font
+```txt
+           :h1          :default
+            |              |
+            | mode         | mode
+        ----------     ----------
+        |        |     |        |
+        v        v     v        v
+      Local    Google Fonts   Local
+```
+
+3. Scrape Titles
+```txt
 
     MD_FILE_ 1                                                    QUEUE
     ------------------------------------------------------        
@@ -65,16 +76,16 @@ Or install it yourself as:
     |    MD_FILE_2                                       |        
     |    -----------------------------------------------------   
     |    |  img src="../b/c/d/1.svg" alt="# Headline 2" -----|->  [ 1 ] 
-    |    |  ...                                              |   
-    |    |  img src="../c/d/e/2.svg" alt="Title 1" ----------|->  [ 2 ] 
-    |    |  ...                                              |   
+    |----|  ...                                              |   
+         |  img src="../c/d/e/2.svg" alt="Title 1" ----------|->  [ 2 ] 
+         |  ...                                              |   
 
     [ 0 ] { text: 'Headline 1', type: :h1, output: '../a/c/d/1.svg' }
     [ 1 ] { text: 'Headline 2', type: :h1, output: '../b/c/d/1.svg' }
     [ 2 ] { text: 'Title 1', type: :default, output: '../c/d/e/2.svg' }
 ```
 
-3. Add Style and Font Options
+4. Add Style and Font Options
 
 ``` ruby                         
                                  default
@@ -89,14 +100,15 @@ Or install it yourself as:
 { ...
 
 ```
-
-
+<br>
+<br>
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/functions.svg" height="55px" alt="Functions">
 
-get_options()
-
-
-
+MarkdownTitlesToSvg.get_options()
+<br>
+<br>
+<br>
+MarkdownTitlesToSvg.get_options()
 <br>
 <br>
 <br>
