@@ -104,7 +104,7 @@ Or install it yourself as:
 <br>
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/functions.svg" height="55px" alt="Functions">
 
-### MarkdownTitlesToSvg.get_options()
+### .get_options()
 
 ```ruby
     AsciiToSvg.get_options()
@@ -112,15 +112,7 @@ Or install it yourself as:
     # => { github: { profile: nil, ...
 ```
 
-### MarkdownTitlesToSvg.get_options()
-
-| **Type** | **Required** | **Description** | **Example** | **Description** |
-|------:|:------|:------|:------|:------| 
-| **markdowns** | ```Array (of String)``` | Yes | ```[ '/markdown-titles-to-svg/main/README.md' ]``` | Define List of Markup |
-| **github user name** | ```String``` | Yes | ```'a6b8'``` | Set Github User Name |
-| **options** | ```Hash``` | No | ```'a6b8'``` | Change default options, see "options" for more Information. |
-
-<br>
+### .get_options()
 
 ```ruby
     MarkdownTitlesToSvg.generate(
@@ -130,7 +122,12 @@ Or install it yourself as:
     )
 ```
 
-<br>
+| **Type** | **Required** | **Description** | **Example** | **Description** |
+|------:|:------|:------|:------|:------| 
+| **markdowns** | ```Array (of String)``` | Yes | ```[ '/markdown-titles-to-svg/main/README.md' ]``` | Define List of Markup |
+| **github user name** | ```String``` | Yes | ```'a6b8'``` | Set Github User Name |
+| **options** | ```Hash``` | No | ```'a6b8'``` | Change default options, see "options" for more Information. |
+
 <br>
 <br>
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/options.svg" height="55px" alt="Options">
