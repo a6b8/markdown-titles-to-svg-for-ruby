@@ -124,7 +124,7 @@ Please use https://google-webfonts-helper.herokuapp.com/fonts to find your favor
 <br>
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/limitations.svg" height="55px" alt="Limitations">
 
-- Font Type are limited to '.ttf' and '.otf'. 
+- Font Types are limited to '.ttf' and '.otf'. 
 - Read only Markdown Files from Github.
 <br>
 <br>
