@@ -46,7 +46,7 @@ Or install it yourself as:
 
 1. Define Markdowns
 ```ruby
-    mds = [ FILE1, FILE2 ]
+    mds = [ PATH_FILE1, PATH_FILE2 ]
     markdown_headlines_to_svg.generate(
         mds,
         "github_profile_name",
@@ -58,15 +58,15 @@ Or install it yourself as:
 2. Scrape Titles
 ```ruby
 
-    FILE1                                                         QUEUE
+    MD_FILE_ 1                                                    QUEUE
     ------------------------------------------------------        
-    |  img src="../a/c/d/1.svg" alt="# Headline 1" ----|------> [ 0 ] 
+    |  img src="../a/c/d/1.svg" alt="# Headline 1" ------|------> [ 0 ] 
     |                                                    |        
-    |    FILE2                                           |        
+    |    MD_FILE_2                                       |        
     |    -----------------------------------------------------   
-    |    |  img src="../b/c/d/1.svg" alt="# Headline 2" ---|->  [ 1 ] 
+    |    |  img src="../b/c/d/1.svg" alt="# Headline 2" -----|->  [ 1 ] 
     |    |  ...                                              |   
-    |    |  img src="../c/d/e/2.svg" alt="Title 1" --------|->  [ 2 ] 
+    |    |  img src="../c/d/e/2.svg" alt="Title 1" ----------|->  [ 2 ] 
     |    |  ...                                              |   
 
     [ 0 ] { text: 'Headline 1', type: :h1, output: '../a/c/d/1.svg' }
@@ -82,7 +82,7 @@ Or install it yourself as:
 {                                   |
     type: :h1, ---------------------|------------------                        
     text: 'Headline 1',             |                 |
-    output: '../a/c/d/1.svg',         V                 V
+    output: '../a/c/d/1.svg',       V                 V
     style: <-------------------- options[ :style ][ :h1 ]
     font: <---------------------- options[ :font ][ :h1 ]
 },
