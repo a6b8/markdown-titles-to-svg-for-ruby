@@ -40,7 +40,8 @@ And then execute:
 Or install it yourself as:
 
     $ gem install markdown_headlines_to_svg
-
+<br>
+<br>
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/functions.svg" height="55px" alt="Functions">
 
 Test
