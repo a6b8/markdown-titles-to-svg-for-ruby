@@ -58,16 +58,15 @@ MD FILE1                                                    TITLES
     | ...                                              |   
     | <img src="../c/d/e/2.svg" alt="Title 1"> --------|->  [ 2 ] 
     | ...                                              |   
-```
 
-1. Add Parameters
-
-``` ruby
 [ 0 ] { text: 'Headline 1', type: :h1, path: '../a/c/d/1.svg' }
 [ 1 ] { text: 'Headline 2', type: :h1, path: '../b/c/d/1.svg' }
 [ 2 ] { text: 'Title 1', type: :default, path: '../c/d/e/2.svg' }
+```
 
-                                  
+1. Add Style and Font Options
+
+``` ruby                      
 [ 0 ] 
 {        
     type: :h1, ---------------------------------------                        
