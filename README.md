@@ -47,39 +47,47 @@ Or install it yourself as:
 
 1. Define Markdowns
 ```ruby
+    mds = [ FILE1, FILE2 ]
+    markdown_headlines_to_svg.generate(
+        mds,
+        github_profile,
+        {}
+    )
 
 ```
 
 2. Scrape Titles
 ```ruby
 
-    MD FILE1                                                    QUE
+    FILE1                                                         QUEUE
     ------------------------------------------------------        
-    |  <img src="../a/c/d/1.svg" alt="# Headline 1"> ----|------>  [ 0 ] 
+    |  <img src="../a/c/d/1.svg" alt="# Headline 1"> ----|------> [ 0 ] 
     |                                                    |        
-    |    MD FILE2                                        |        
+    |    FILE2                                           |        
     |    -----------------------------------------------------   
     |    |  <img src="../b/c/d/1.svg" alt="# Headline 2"> ---|->  [ 1 ] 
     |    |  ...                                              |   
     |    |  <img src="../c/d/e/2.svg" alt="Title 1"> --------|->  [ 2 ] 
     |    |  ...                                              |   
 
-[ 0 ] { text: 'Headline 1', type: :h1, path: '../a/c/d/1.svg' }
-[ 1 ] { text: 'Headline 2', type: :h1, path: '../b/c/d/1.svg' }
-[ 2 ] { text: 'Title 1', type: :default, path: '../c/d/e/2.svg' }
+    [ 0 ] { text: 'Headline 1', type: :h1, path: '../a/c/d/1.svg' }
+    [ 1 ] { text: 'Headline 2', type: :h1, path: '../b/c/d/1.svg' }
+    [ 2 ] { text: 'Title 1', type: :default, path: '../c/d/e/2.svg' }
 ```
 
 3. Add Style and Font Options
 
-``` ruby                      
-[ 0 ] {        
-    type: :h1, ---------------------------------------                        
-    text: 'Headline 1',                              |
-    path: '../a/c/d/1.svg',                          V
+``` ruby                         
+                                 default
+                                 + user options
+{                                   |
+    type: :h1, ---------------------|------------------                        
+    text: 'Headline 1',             |                 |
+    path: '../a/c/d/1.svg',         V                 V
     style: <-------------------- options[ :style ][ :h1 ]
     font: <---------------------- options[ :font ][ :h1 ]
 },
-[ 1 ] { ...
+{ ...
 
 ```
 
