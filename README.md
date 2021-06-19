@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/Headline.svg" height="55px" alt="# Markdown Headlines to .svg for Ruby">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/titles.svg" height="55px" alt="# Markdown Titles to .svg for Ruby">
 
 Headline Generator for ```Github Markdown``` File to generate beautiful ```Google Fonts``` Headlines. 
 <br>
@@ -104,11 +104,32 @@ Or install it yourself as:
 <br>
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/functions.svg" height="55px" alt="Functions">
 
-MarkdownTitlesToSvg.get_options()
+### MarkdownTitlesToSvg.get_options()
+
+```ruby
+    AsciiToSvg.get_options()
+
+    # => { github: { profile: nil, ...
+```
+
+### MarkdownTitlesToSvg.get_options()
+
+| **Type** | **Required** | **Description** | **Example** | **Description** |
+|------:|:------|:------|:------|:------| 
+| **markdowns** | ```Array (of String)``` | Yes | ```[ '/markdown-titles-to-svg/main/README.md' ]``` | Define List of Markup |
+| **github user name** | ```String``` | Yes | ```'a6b8'``` | Set Github User Name |
+| **options** | ```Hash``` | No | ```'a6b8'``` | Change default options, see "options" for more Information. |
+
 <br>
-<br>
-<br>
-MarkdownTitlesToSvg.get_options()
+
+```ruby
+    MarkdownTitlesToSvg.generate(
+        markdowns,
+        'a6b8',
+        {}
+    )
+```
+
 <br>
 <br>
 <br>
