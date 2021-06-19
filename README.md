@@ -53,7 +53,8 @@ Test
 | Nr | Name | Key | Default | Type | Description |
 | :-- | :-- | :-- | :-- | :-- | :-- |
 | A.1. | Source |:github__source | `"https://raw.githubusercontent.com/"` | String | |
-<br>
+
+
 ### Font
 | Nr | Name | Key | Default | Type | Description |
 | :-- | :-- | :-- | :-- | :-- | :-- |
@@ -61,13 +62,15 @@ Test
 | B.2. | Bold |:font__bold | `false` | Boolean | |
 | B.3. | Mode H1 |:font__mode__h1 | `google_fonts` | Symbol | |
 | B.4. | Mode Default |:font__mode__default | `google_fonts` | Symbol | |
-<br>
+
+
 #### Import from Local
 | Nr | Name | Key | Default | Type | Description |
 | :-- | :-- | :-- | :-- | :-- | :-- |
 | B.5. | H1 |:font__local__h1 | `"/Library/Fonts/Microsoft/Corbel Bold.ttf"` | String | |
 | B.6. | Default |:font__local__default | `"/Library/Fonts/Microsoft/Consolas.ttf"` | String | |
-<br>
+
+
 #### Import from "Google Fonts"
 | Nr | Name | Key | Default | Type | Description |
 | :-- | :-- | :-- | :-- | :-- | :-- |
@@ -79,15 +82,13 @@ Test
 | B.12. | Default Subset |:font__google_fonts__default__subset | `"latin"` | String | |
 
 Please use https://google-webfonts-helper.herokuapp.com/fonts to find your favorite Font.
-<br>
-<br>
+
 ### View
 | Nr | Name | Key | Default | Type | Description |
 | :-- | :-- | :-- | :-- | :-- | :-- |
 | C.1. | Offset Height |:view__offset__height | `0` | Integer | |
 | C.2. | Offset Widht |:view__offset__widht | `0` | Integer | |
-<br>
-<br>
+
 ### Style
 
 #### Headlines
@@ -100,7 +101,7 @@ Please use https://google-webfonts-helper.herokuapp.com/fonts to find your favor
 | D.5. | Stroke Width |:style__h1__stroke__width | `"0"` | String | |
 | D.6. | Stroke Opacity |:style__h1__stroke__opacity | `1.0` | Float | |
 | D.7. | Stroke Linecap |:style__h1__stroke__linecap | `"butt"` | String | |
-<br>
+
 #### Default
 | Nr | Name | Key | Default | Type | Description |
 | :-- | :-- | :-- | :-- | :-- | :-- |
