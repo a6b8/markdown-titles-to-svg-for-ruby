@@ -41,11 +41,82 @@ Or install it yourself as:
 
     $ gem install markdown_headlines_to_svg
 
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/parameters.svg" height="55px" alt="Parameters">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/functions.svg" height="55px" alt="Functions">
+
+Test
 <br>
 <br>
 <br>
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/options.svg" height="55px" alt="Options">
+
+### Github
+| Nr | Name | Key | Default | Type | Description |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| A.1. | Source |:github__source | `"https://raw.githubusercontent.com/"` | String | |
+
+
+### Font
+| Nr | Name | Key | Default | Type | Description |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| B.1. | Text_align |:font__text_align | `left` | Symbol | |
+| B.2. | Bold |:font__bold | `false` | Boolean | |
+| B.3. | Mode H1 |:font__mode__h1 | `google_fonts` | Symbol | |
+| B.4. | Mode Default |:font__mode__default | `google_fonts` | Symbol | |
+
+#### Import Local Font
+| Nr | Name | Key | Default | Type | Description |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| B.5. | Local H1 |:font__local__h1 | `"/Library/Fonts/Microsoft/Corbel Bold.ttf"` | String | |
+| B.6. | Local Default |:font__local__default | `"/Library/Fonts/Microsoft/Consolas.ttf"` | String | |
+
+#### Import from Google Fonts
+| Nr | Name | Key | Default | Type | Description |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| B.7. | Google_fonts H1 Name |:font__google_fonts__h1__name | `"Oswald"` | String | |
+| B.8. | Google_fonts H1 Variant |:font__google_fonts__h1__variant | `"regular"` | String | |
+| B.9. | Google_fonts H1 Subset |:font__google_fonts__h1__subset | `"latin"` | String | |
+| B.10. | Google_fonts Default Name |:font__google_fonts__default__name | `"Amatic SC"` | String | |
+| B.11. | Google_fonts Default Variant |:font__google_fonts__default__variant | `"regular"` | String | |
+| B.12. | Google_fonts Default Subset |:font__google_fonts__default__subset | `"latin"` | String | |
+
+
+### View
+| Nr | Name | Key | Default | Type | Description |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| C.1. | Offset Height |:view__offset__height | `0` | Integer | |
+| C.2. | Offset Widht |:view__offset__widht | `0` | Integer | |
+
+
+### Style
+
+#### Headlines
+| Nr | Name | Key | Default | Type | Description |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| D.1. | H1 Color Opacity |:style__h1__color__opacity | `1.0` | Float | |
+| D.2. | H1 Color Default |:style__h1__color__default | `"#A5834B"` | String | |
+| D.3. | H1 Color Palette |:style__h1__color__palette | `[]` | Array | |
+| D.4. | H1 Stroke Color |:style__h1__stroke__color | `"none"` | String | |
+| D.5. | H1 Stroke Width |:style__h1__stroke__width | `"0"` | String | |
+| D.6. | H1 Stroke Opacity |:style__h1__stroke__opacity | `1.0` | Float | |
+| D.7. | H1 Stroke Linecap |:style__h1__stroke__linecap | `"butt"` | String | |
+
+#### Default
+| Nr | Name | Key | Default | Type | Description |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| D.8. | Default Color Opacity |:style__default__color__opacity | `1.0` | Float | |
+| D.9. | Default Color Default |:style__default__color__default | `"#A5834B"` | String | |
+| D.10. | Default Color Palette |:style__default__color__palette | `[]` | Array | |
+| D.11. | Default Stroke Color |:style__default__stroke__color | `"none"` | String | |
+| D.12. | Default Stroke Width |:style__default__stroke__width | `"0"` | String | |
+| D.13. | Default Stroke Opacity |:style__default__stroke__opacity | `1.0` | Float | |
+| D.14. | Default Stroke Linecap |:style__default__stroke__linecap | `"butt"` | String | |
+
+
+### Silent
+| Nr | Name | Key | Default | Type | Description |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| E.1. |  |:silent | `false` | Boolean | |
+
 <br>
 <br>
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/contributing.svg" height="55px" alt="Contributing">
