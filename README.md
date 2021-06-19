@@ -107,7 +107,7 @@ Or install it yourself as:
 ### .get_options()
 
 ```ruby
-    AsciiToSvg.get_options()
+    MarkdownTitlesToSvg.get_options()
 
     # => { github: { profile: nil, ...
 ```
