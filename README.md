@@ -46,7 +46,7 @@ Or install it yourself as:
 ## Process
 
 1. Find Titles
-``` bash
+```ruby
 
 MD FILE1                                                    TITLES
 ---------------------------------------------------        
@@ -60,18 +60,26 @@ MD FILE1                                                    TITLES
     | ...                                              |   
 ```
 
-2. Add Parameters
+1. Add Parameters
 
-``` bash
+``` ruby
 [ 0 ] { text: 'Headline 1', type: :h1, path: '../a/c/d/1.svg' }
 [ 1 ] { text: 'Headline 2', type: :h1, path: '../b/c/d/1.svg' }
 [ 2 ] { text: 'Title 1', type: :default, path: '../c/d/e/2.svg' }
 
+                                  
+[ 0 ] 
+{        
+    type: :h1, ---------------------------------------                        
+    text: 'Headline 1',                              |
+    path: '../a/c/d/1.svg',                          V
+    style: <-------------------- options[ :style ][ :h1 ]
+    font: <--------------------- options[ :font ][ :h1 ]
+},
+{ ...
 
 ```
 
-
-2. Download Prepare Fonts
 
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/functions.svg" height="55px" alt="Functions">
 
