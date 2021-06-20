@@ -56,7 +56,7 @@ module MarkdownTitlesToSvg
       h1: {
         color: {
           opacity: 1.0,
-          default: '#A5834B',
+          default: '#A96ECA',
           palette: []
         },
         stroke: {
@@ -69,7 +69,7 @@ module MarkdownTitlesToSvg
       default: {
         color: {
           opacity: 1.0,
-          default: '#A5834B',
+          default: '#A96ECA',
           palette: []
         },
         stroke: {
