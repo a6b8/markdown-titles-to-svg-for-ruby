@@ -89,8 +89,33 @@ module MarkdownTitlesToSvg
   end
 
 
+  def self.single( headline, type, options = {})
+    svg = nil
+    if self.validate_single( headline, type, options, @TEMPLATE )
+      obj = self.options_update( options, @TEMPLATE, 'set_options' )
+      obj = self.set_fonts( obj )
+
+      cmd = {}
+      cmd[:headline] = headline
+      cmd[:type] = type
+      svg = self.svg_generate( cmd, obj )
+    end
+
+    obj[:font][:mode].keys.each do | key |
+      if obj[:font][:mode][ key ] == :google_fonts
+        if ( Time.now.getutc.to_i - obj[:font][:current][ key ].split( '-' )[ 1 ].to_i ) < 30
+          if File.basename( obj[:font][:current][ key ] ) .start_with?( key.to_s )
+            File.delete( obj[:font][:current][ key ] )
+          end
+        end
+      end
+    end
+    return svg
+  end
+
+
   def self.generate( markdowns, gh_name, options = {} )
-    if self.validate( markdowns, gh_name, options, @TEMPLATE )
+    if self.validate_generate( markdowns, gh_name, options, @TEMPLATE )
       obj = self.options_update( options, @TEMPLATE, 'set_options' )
       obj[:github][:profile] = gh_name
       obj = self.set_fonts( obj )
@@ -99,9 +124,10 @@ module MarkdownTitlesToSvg
 
       root = './'
       cmds.each do | cmd |
+        puts cmd
         svg = self.svg_generate( cmd, obj )
         FileUtils.mkdir_p ( File.dirname( cmd[:path] ) )
-        File.open( cmd[:path], "w" ) { | f | f.write( svg ) }
+        File.open( cmd[:path], 'w' ) { | f | f.write( svg ) }
       end
 
       obj[:font][:mode].keys.each do | key |
@@ -191,7 +217,7 @@ module MarkdownTitlesToSvg
       .min_by { | h | h[:score] }
   
     font = fonts_subset
-      .find { | a | a["id"].eql? id[:name] }
+      .find { | a | a["id"].eql?( id[:name] ) }
   
     variant = font['variants']
       .map { | a | { name: a, score: self.str_difference( style.to_s, a.to_s ) } }
@@ -215,7 +241,53 @@ module MarkdownTitlesToSvg
   end
 
 
-  def self.validate( markdowns, gh_name, vars, template )
+  def self.validate_single( headline, type, vars, template )
+    messages = { 
+      headline:[], 
+      type:[], 
+      options:[] 
+    }
+    if headline.class.to_s.eql?( 'String' )
+    else
+      messages[:headline].push( 'Is not Type "String"')
+    end
+
+    if type.class.to_s.eql?( 'Symbol' )
+      if [ :h1, :default ].include? type
+      else
+        messages[:type].push( 'Input is not :h1 or :default' )
+      end
+    else
+      messages[:type].push( 'Is not Type "Symbol"' )
+    end
+
+    if vars.class.to_s == 'Hash'
+      messages[:options] = self.options_update( vars, template, 'check_options' )
+    else
+      messages[:options].push( 'Is not Type "Hash".') 
+    end
+
+
+    valid = messages.keys.map { | key | messages[ key ].length }.sum == 0
+
+    if !valid
+      puts 'Following errors occured:'
+      messages.keys.each do | key |
+        if messages[ key ].length != 0
+
+          puts "  #{key[ 0, 1 ].upcase}#{key[ 1, key.length ]}"
+          messages[ key ].each do | m |
+            puts "  - #{m}"
+          end
+        end
+      end
+    end
+
+    return valid
+  end
+
+
+  def self.validate_generate( markdowns, gh_name, vars, template )
     messages = {
       markdowns: [],
       github: [],
@@ -224,7 +296,7 @@ module MarkdownTitlesToSvg
     }
 
     #begin
-      if markdowns.class.to_s.eql? 'Array'
+      if markdowns.class.to_s.eql?( 'Array' )
         if markdowns.map { | a | a.start_with?( template[:github][:source] ) }.all?
           if markdowns.map { | a | a.end_with?( '.md' ) }.all?
 
@@ -238,8 +310,8 @@ module MarkdownTitlesToSvg
         messages[:markdowns].push( 'Is not Type "Array" or "String".' )
       end
 
-      if gh_name.class.to_s.eql? 'String'
-        if !gh_name.eql? ''
+      if gh_name.class.to_s.eql?( 'String' )
+        if !gh_name.eql?( '' )
 
         else
           messages[:github].push( "Github Name is required." )
