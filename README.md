@@ -6,235 +6,53 @@ Headline Generator for ```Github Markdown``` File to generate beautiful ```Googl
 <br>
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/examples.svg" height="55px" alt="Examples">
 
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/0.svg" height="40px">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/20.svg" height="45px">
 
 ```ruby
-	{
-		font__google_fonts__h1__name: Alex Brush,
-	}
+	{ font__google_fonts__h1__name: "Permanent Marker" }
 ```
 
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/1.svg" height="40px">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/21.svg" height="45px">
 
 ```ruby
-	{
-		font__google_fonts__h1__name: Advent Pro,
-	}
+	{ font__google_fonts__h1__name: "Playfair Display" }
 ```
 
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/2.svg" height="40px">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/22.svg" height="45px">
 
 ```ruby
-	{
-		font__google_fonts__h1__name: Archivo Narrow,
-	}
+	{ font__google_fonts__h1__name: "Roboto Condensed" }
 ```
 
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/3.svg" height="40px">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/23.svg" height="45px">
 
 ```ruby
-	{
-		font__google_fonts__h1__name: Artifika,
-	}
+	{ font__google_fonts__h1__name: "Sarina" }
 ```
 
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/4.svg" height="40px">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/24.svg" height="45px">
 
 ```ruby
-	{
-		font__google_fonts__h1__name: Astloch,
-	}
+	{ font__google_fonts__h1__name: "Sonsie One" }
 ```
 
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/5.svg" height="40px">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/25.svg" height="45px">
 
 ```ruby
-	{
-		font__google_fonts__h1__name: Atma,
-	}
+	{ font__google_fonts__h1__name: "Trocchi" }
 ```
 
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/6.svg" height="40px">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/26.svg" height="45px">
 
 ```ruby
-	{
-		font__google_fonts__h1__name: Bangers,
-	}
+	{ font__google_fonts__h1__name: "UnifrakturMaguntia" }
 ```
 
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/7.svg" height="40px">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/27.svg" height="45px">
 
 ```ruby
-	{
-		font__google_fonts__h1__name: Bebas Neue,
-	}
+	{ font__google_fonts__h1__name: "Zilla Slab Highlight" }
 ```
-
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/8.svg" height="40px">
-
-```ruby
-	{
-		font__google_fonts__h1__name: Bungee Hairline,
-	}
-```
-
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/9.svg" height="40px">
-
-```ruby
-	{
-		font__google_fonts__h1__name: Fjallo One,
-	}
-```
-
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/10.svg" height="40px">
-
-```ruby
-	{
-		font__google_fonts__h1__name: Hammersmith One,
-	}
-```
-
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/11.svg" height="40px">
-
-```ruby
-	{
-		font__google_fonts__h1__name: Happy Monkey,
-	}
-```
-
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/12.svg" height="40px">
-
-```ruby
-	{
-		font__google_fonts__h1__name: IM Fell French Canon SC,
-	}
-```
-
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/13.svg" height="40px">
-
-```ruby
-	{
-		font__google_fonts__h1__name: JetBrains Mono,
-		style__h1__color__palette: ["#2A2B2A", "#5E4955", "#996888", "#C99DA3", "#C99DA3", "#996888", "#5E4955", "#2A2B2A"],
-	}
-```
-
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/14.svg" height="40px">
-
-```ruby
-	{
-		font__google_fonts__h1__name: Josefin Sans,
-		style__h1__color__palette: ["#2A2B2A", "#5E4955", "#996888", "#C99DA3", "#C99DA3", "#996888", "#5E4955", "#2A2B2A"],
-	}
-```
-
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/15.svg" height="40px">
-
-```ruby
-	{
-		font__google_fonts__h1__name: Kaushan Script,
-	}
-```
-
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/16.svg" height="40px">
-
-```ruby
-	{
-		font__google_fonts__h1__name: Libre Barcode 128 Text,
-	}
-```
-
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/17.svg" height="40px">
-
-```ruby
-	{
-		font__google_fonts__h1__name: Luckiest Guy,
-	}
-```
-
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/18.svg" height="40px">
-
-```ruby
-	{
-		font__google_fonts__h1__name: Marcellus,
-	}
-```
-
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/19.svg" height="40px">
-
-```ruby
-	{
-		font__google_fonts__h1__name: Orelega One,
-	}
-```
-
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/20.svg" height="40px">
-
-```ruby
-	{
-		font__google_fonts__h1__name: Permanent Marker,
-	}
-```
-
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/21.svg" height="40px">
-
-```ruby
-	{
-		font__google_fonts__h1__name: Playfair Display,
-	}
-```
-
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/22.svg" height="40px">
-
-```ruby
-	{
-		font__google_fonts__h1__name: Roboto Condensed,
-	}
-```
-
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/23.svg" height="40px">
-
-```ruby
-	{
-		font__google_fonts__h1__name: Sarina,
-	}
-```
-
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/24.svg" height="40px">
-
-```ruby
-	{
-		font__google_fonts__h1__name: Sonsie One,
-	}
-```
-
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/25.svg" height="40px">
-
-```ruby
-	{
-		font__google_fonts__h1__name: Trocchi,
-	}
-```
-
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/26.svg" height="40px">
-
-```ruby
-	{
-		font__google_fonts__h1__name: UnifrakturMaguntia,
-	}
-```
-
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/27.svg" height="40px">
-
-```ruby
-	{
-		font__google_fonts__h1__name: Zilla Slab Highlight,
-	}
-```
-
-
-
-<br>
 <br>
 <br>
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/quickstart.svg" height="55px" alt="Quickstart">
@@ -256,7 +74,7 @@ MarkdownTitlesToSvg.generate(
 <br>
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/demo.svg" height="55px" alt="Demo">
 
-**A. Implemention**
+**A. Implementation**
 > https://raw.githubusercontent.com/a6b8/a6b8/main/README.md
 
 
