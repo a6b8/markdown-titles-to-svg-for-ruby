@@ -215,8 +215,8 @@ Generate a single Title and outputs a svg string.
 
 | **Type** | **Required** | **Description** | **Example** | **Description** |
 |------:|:------|:------|:------|:------| 
-| **headline** | ```String``` | Yes | ```'headline'``` | Define List of Markup |
-| **style** | ```Symbol``` | Yes | ```:h1``` |  |
+| **headline** | ```String``` | Yes | ```'headline'``` | Set Text of Headline/Title |
+| **style** | ```Symbol``` | Yes | ```:h1``` | Set type of style, choose between :h1 and :default |
 | **options** | ```Hash``` | No | ```{}``` | Change default options, see "options" for more Information. |
 
 <br>
