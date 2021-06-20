@@ -57,18 +57,31 @@ Headline Generator for ```Github Markdown``` File to generate beautiful ```Googl
 <br>
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/quickstart.svg" height="55px" alt="Quickstart">
 
+### Single Title
 ```ruby
-require 'markdown_titles_to_svg'
+    require 'markdown_titles_to_svg'
 
-markdowns = [
-    'https://raw.githubusercontent.com/a6b8/a6b8/main/templates/readme.md'
-]
+    svg = MarkdownTitlesToSvg.single( 
+        'headline',
+        :h1,
+        {}
+    )
+```
 
-MarkdownTitlesToSvg.generate( 
-    markdowns,
-    'a6b8',
-    {}
-)
+
+### Generate from Github Markdown
+```ruby
+    require 'markdown_titles_to_svg'
+
+    markdowns = [
+        'https://raw.githubusercontent.com/a6b8/a6b8/main/templates/readme.md'
+    ]
+
+    MarkdownTitlesToSvg.generate( 
+        markdowns,
+        'a6b8',
+        {}
+    )
 ```
 <br>
 <br>
@@ -188,7 +201,24 @@ Generate and store of Titles in all Files
 | **github user name** | ```String``` | Yes | ```'a6b8'``` | Set Github User Name |
 | **options** | ```Hash``` | No | ```'a6b8'``` | Change default options, see "options" for more Information. |
 
-<br>
+### .single( [], '', {} )
+Generate a single Title and outputs a svg string.
+```ruby
+    svg = MarkdownTitlesToSvg.single( 
+        'headline',
+        :h1,
+        {}
+    )
+
+    # => <svg ...
+```
+
+| **Type** | **Required** | **Description** | **Example** | **Description** |
+|------:|:------|:------|:------|:------| 
+| **headline** | ```String``` | Yes | ```'headline'``` | Define List of Markup |
+| **style** | ```Symbol``` | Yes | ```:h1``` |  |
+| **options** | ```Hash``` | No | ```{}``` | Change default options, see "options" for more Information. |
+
 <br>
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/options.svg" height="55px" alt="Options">
 
@@ -201,66 +231,68 @@ Generate and store of Titles in all Files
 ### Font
 | Nr | Name | Key | Default | Type | Description |
 | :-- | :-- | :-- | :-- | :-- | :-- |
-| B.1. | Text_align |:font__text_align | `left` | Symbol | |
-| B.2. | Bold |:font__bold | `false` | Boolean | |
-| B.3. | Mode H1 |:font__mode__h1 | `google_fonts` | Symbol | |
-| B.4. | Mode Default |:font__mode__default | `google_fonts` | Symbol | |
+| B.1. | Text_align |:font__text_align | `left` | Symbol | Set aligment of text |
+| B.2. | Bold |:font__bold | `false` | Boolean | Set format of font. If you use Google Fonts try "variant first" |
+| B.3. | Mode H1 |:font__mode__h1 | `:google_fonts` | Symbol | Set mode for Headlines. Choose between :h1 and :google_fonts |
+| B.4. | Mode Default |:font__mode__default | `:google_fonts` | Symbol | Set mode for Titles. Choose between :h1 and :google_font |
 
 
 #### Import from Local
 | Nr | Name | Key | Default | Type | Description |
 | :-- | :-- | :-- | :-- | :-- | :-- |
-| B.5. | H1 |:font__local__h1 | `"/Library/Fonts/Microsoft/Corbel Bold.ttf"` | String | |
-| B.6. | Default |:font__local__default | `"/Library/Fonts/Microsoft/Consolas.ttf"` | String | |
+| B.5. | H1 |:font__local__h1 | `"/Library/Fonts/Microsoft/Corbel Bold.ttf"` | String | Set local font for Headline if necessary |
+| B.6. | Default |:font__local__default | `"/Library/Fonts/Microsoft/Consolas.ttf"` | String | String | Set local font for Titles if necessary |
 
 
 #### Import from "Google Fonts"
 | Nr | Name | Key | Default | Type | Description |
 | :-- | :-- | :-- | :-- | :-- | :-- |
-| B.7. | H1 Name |:font__google_fonts__h1__name | `"Oswald"` | String | |
-| B.8. | H1 Variant |:font__google_fonts__h1__variant | `"regular"` | String | |
-| B.9. | H1 Subset |:font__google_fonts__h1__subset | `"latin"` | String | |
-| B.10. | Default Name |:font__google_fonts__default__name | `"Amatic SC"` | String | |
-| B.11. | Default Variant |:font__google_fonts__default__variant | `"regular"` | String | |
-| B.12. | Default Subset |:font__google_fonts__default__subset | `"latin"` | String | |
+| B.7. | H1 Name |:font__google_fonts__h1__name | `"Oswald"` | String | Set Google Fonts font name for Headline |
+| B.8. | H1 Variant |:font__google_fonts__h1__variant | `"regular"` | String | Set Google Fonts variant type for headlines |
+| B.9. | H1 Subset |:font__google_fonts__h1__subset | `"latin"` | String | Set Google Fonts subset type for headlines |
+| B.10. | Default Name |:font__google_fonts__default__name | `"Amatic SC"` | String | Set Google Fonts font name for Titles |
+| B.11. | Default Variant |:font__google_fonts__default__variant | `"regular"` | String | Set Google Fonts variant type for titles |
+| B.12. | Default Subset |:font__google_fonts__default__subset | `"latin"` | String | Set Google Fonts subset type for titles |
 
 Please use https://google-webfonts-helper.herokuapp.com/fonts to find your favorite Font.
 
 ### View
 | Nr | Name | Key | Default | Type | Description |
 | :-- | :-- | :-- | :-- | :-- | :-- |
-| C.1. | Offset Height |:view__offset__height | `0` | Integer | |
-| C.2. | Offset Widht |:view__offset__widht | `0` | Integer | |
+| C.1. | Offset Height |:view__offset__height | `0` | Integer | Experimental: Set change View Box height |
+| C.2. | Offset Widht |:view__offset__widht | `0` | Integer | Experimental: Set change View Box width |
 
 ### Style
 
 #### Headlines
 | Nr | Name | Key | Default | Type | Description |
 | :-- | :-- | :-- | :-- | :-- | :-- |
-| D.1. | Color Opacity |:style__h1__color__opacity | `1.0` | Float | |
-| D.2. | Color Default |:style__h1__color__default | `"#A5834B"` | String | |
-| D.3. | Color Palette |:style__h1__color__palette | `[]` | Array | |
-| D.4. | Stroke Color |:style__h1__stroke__color | `"none"` | String | |
-| D.5. | Stroke Width |:style__h1__stroke__width | `"0"` | String | |
-| D.6. | Stroke Opacity |:style__h1__stroke__opacity | `1.0` | Float | |
-| D.7. | Stroke Linecap |:style__h1__stroke__linecap | `"butt"` | String | |
+| D.1. | Color Opacity |:style__h1__color__opacity | `1.0` | Float | Change Headline color opacity |
+| D.2. | Color Default |:style__h1__color__default | `"#A5834B"` | String | Change Headline fill color |
+| D.3. | Color Palette |:style__h1__color__palette | `[]` | Array | Experimental: Set for each character in headline an other color |
+| D.4. | Stroke Color |:style__h1__stroke__color | `"none"` | String | Change headline fill color of stroke |
+| D.5. | Stroke Width |:style__h1__stroke__width | `"0"` | String | Change headline stroke width |
+| D.6. | Stroke Opacity |:style__h1__stroke__opacity | `1.0` | Float | Change headline stroke opacity |
+| D.7. | Stroke Linecap |:style__h1__stroke__linecap | `"butt"` | String | Change headline stroke width |
 
 #### Default
 | Nr | Name | Key | Default | Type | Description |
 | :-- | :-- | :-- | :-- | :-- | :-- |
-| D.8. | Color Opacity |:style__default__color__opacity | `1.0` | Float | |
-| D.9. | Color Default |:style__default__color__default | `"#A5834B"` | String | |
-| D.10. | Color Palette |:style__default__color__palette | `[]` | Array | |
-| D.11. | Stroke Color |:style__default__stroke__color | `"none"` | String | |
-| D.12. | Stroke Width |:style__default__stroke__width | `"0"` | String | |
-| D.13. | Stroke Opacity |:style__default__stroke__opacity | `1.0` | Float | |
-| D.14. | Stroke Linecap |:style__default__stroke__linecap | `"butt"` | String | |
+| D.8. | Color Opacity |:style__default__color__opacity | `1.0` | Float | Change Title color opacity |
+| D.9. | Color Default |:style__default__color__default | `"#A5834B"` | String | Change Title fill color |
+| D.10. | Color Palette |:style__default__color__palette | `[]` | Array | Experimental: Set for each character in titles an other color |
+| D.11. | Stroke Color |:style__default__stroke__color | `"none"` | String | Change title fill color of stroke |
+| D.12. | Stroke Width |:style__default__stroke__width | `"0"` | String | Change title stroke width |
+| D.13. | Stroke Opacity |:style__default__stroke__opacity | `1.0` | Float | Change title stroke opacity |
+| D.14. | Stroke Linecap |:style__default__stroke__linecap | `"butt"` | String | Change title stroke width |
+
+You can find more Information about ```svg``` format here: https://developer.mozilla.org/en-US/docs/Web/SVG/Element/path
 
 
 ### Other
 | Nr | Name | Key | Default | Type | Description |
 | :-- | :-- | :-- | :-- | :-- | :-- |
-| E.1. | Silent | :silent | `false` | Boolean | |
+| E.1. | Silent | :silent | `false` | Boolean | Controll console output. |
 
 <br>
 <br>
