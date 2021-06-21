@@ -356,6 +356,8 @@ module MarkdownTitlesToSvg
       :font__bold,
       :font__mode__h1,
       :font__mode__default,
+      :font__local__h1,
+      :font__local__default,
       :font__google_fonts__h1__name,
       :font__google_fonts__h1__variant,
       :font__google_fonts__h1__subset,
