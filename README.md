@@ -233,8 +233,8 @@ Generate a single Title and outputs a svg string.
 | :-- | :-- | :-- | :-- | :-- | :-- |
 | B.1. | Text_align |:font__text_align | `left` | Symbol | Set aligment of text |
 | B.2. | Bold |:font__bold | `false` | Boolean | Set format of font. If you use Google Fonts try "variant first" |
-| B.3. | Mode H1 |:font__mode__h1 | `:google_fonts` | Symbol | Set mode for Headlines. Choose between :h1 and :google_fonts |
-| B.4. | Mode Default |:font__mode__default | `:google_fonts` | Symbol | Set mode for Titles. Choose between :h1 and :google_font |
+| B.3. | Mode H1 |:font__mode__h1 | `:google_fonts` | Symbol | Set mode for Headlines. Choose between ```:local``` and ```:google_fonts``` |
+| B.4. | Mode Default |:font__mode__default | `:google_fonts` | Symbol | Set mode for Titles. Choose between ```:local``` and ```:google_font``` |
 
 
 #### Import from Local
