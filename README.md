@@ -113,6 +113,8 @@ And then execute:
 Or install it yourself as:
 
     $ gem install markdown_headlines_to_svg
+
+![](https://ruby-gem-downloads-badge.herokuapp.com/markdown_titles_to_svg?type=total&color=lightgray)
 <br>
 <br>
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/process.svg" height="55px" alt="Process">
