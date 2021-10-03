@@ -1,10 +1,15 @@
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/titles.svg" height="45px" alt="# Markdown Titles to .svg for Ruby">
+<a href="#table-of-contents">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/titles.svg" height="45px" alt="# Markdown Titles to .svg for Ruby" name="headline">
+</a>
 
 Headline Generator for ```Github Markdown``` File to generate beautiful ```Google Fonts``` Headlines. 
 
 <br>
 
+<a href="#table-of-contents">
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/examples.svg" height="38px" alt="Examples">
+</a>
+
 <br>
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/20.svg" height="38px">
 
@@ -56,7 +61,9 @@ Headline Generator for ```Github Markdown``` File to generate beautiful ```Googl
 
 <br>
 
+<a href="#headline">
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/table-of-contents.svg" height="38px" alt="Table of Contents" name="table-of-contents">
+</a>
 
 
 1. [Examples](#examples)<br>
