@@ -99,7 +99,7 @@ Headline Generator for ```Github Markdown``` File to generate beautiful ```Googl
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/quickstart.svg" height="38px" alt="Quickstart" name="quickstart">
 </a>
 
-### Single Title
+**Single Title**
 ```ruby
 require 'markdown_titles_to_svg'
 
@@ -111,7 +111,7 @@ svg = MarkdownTitlesToSvg.single(
 ```
 
 
-### Generate from Github Markdown
+**Generate from Github Markdown**
 ```ruby
 require 'markdown_titles_to_svg'
 
