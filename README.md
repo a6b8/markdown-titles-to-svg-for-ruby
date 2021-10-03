@@ -1,91 +1,110 @@
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/titles.svg" height="55px" alt="# Markdown Titles to .svg for Ruby">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/titles.svg" height="45px" alt="# Markdown Titles to .svg for Ruby">
 
 Headline Generator for ```Github Markdown``` File to generate beautiful ```Google Fonts``` Headlines. 
+
 <br>
+
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/examples.svg" height="38px" alt="Examples">
 <br>
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/20.svg" height="38px">
+
+```ruby
+{ font__google_fonts__h1__name: "Permanent Marker" }
+```
+
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/21.svg" height="38px">
+
+```ruby
+{ font__google_fonts__h1__name: "Playfair Display" }
+```
+
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/22.svg" height="38px">
+
+```ruby
+{ font__google_fonts__h1__name: "Roboto Condensed" }
+```
+
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/23.svg" height="38px">
+
+```ruby
+{ font__google_fonts__h1__name: "Sarina" }
+```
+
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/24.svg" height="38px">
+
+```ruby
+{ font__google_fonts__h1__name: "Sonsie One" }
+```
+
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/25.svg" height="38px">
+
+```ruby
+{ font__google_fonts__h1__name: "Trocchi" }
+```
+
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/26.svg" height="38px">
+
+```ruby
+{ font__google_fonts__h1__name: "UnifrakturMaguntia" }
+```
+
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/27.svg" height="38px">
+
+```ruby
+{ font__google_fonts__h1__name: "Zilla Slab Highlight" }
+```
+
 <br>
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/examples.svg" height="55px" alt="Examples">
 
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/20.svg" height="45px">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/table-of-contents.svg" height="38px" alt="Table of Contents" name="table-of-contents">
 
-```ruby
-	{ font__google_fonts__h1__name: "Permanent Marker" }
-```
 
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/21.svg" height="45px">
+1. [Examples](#examples)<br>
+2. [Quickstart](#quickstart)<br>
+3. [Demo](#demo)<br>
+4. [Setup](#setup)<br>
+5. [Process](#process)<br>
+6. [Functions](#functions)<br>
+7. [Options](#options)<br>
+8. [Limitations](#limitations)<br>
+9. [Contributing](#contributing)<br>
+11. [License](#license)<br>
+12. [Code of Conduct](#code-of-conduct)<br>
+13. [Support my Work](#support-my-work)<br>
 
-```ruby
-	{ font__google_fonts__h1__name: "Playfair Display" }
-```
 
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/22.svg" height="45px">
-
-```ruby
-	{ font__google_fonts__h1__name: "Roboto Condensed" }
-```
-
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/23.svg" height="45px">
-
-```ruby
-	{ font__google_fonts__h1__name: "Sarina" }
-```
-
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/24.svg" height="45px">
-
-```ruby
-	{ font__google_fonts__h1__name: "Sonsie One" }
-```
-
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/25.svg" height="45px">
-
-```ruby
-	{ font__google_fonts__h1__name: "Trocchi" }
-```
-
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/26.svg" height="45px">
-
-```ruby
-	{ font__google_fonts__h1__name: "UnifrakturMaguntia" }
-```
-
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/27.svg" height="45px">
-
-```ruby
-	{ font__google_fonts__h1__name: "Zilla Slab Highlight" }
-```
-<br>
-<br>
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/quickstart.svg" height="55px" alt="Quickstart">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/quickstart.svg" height="38px" alt="Quickstart">
 
 ### Single Title
 ```ruby
-    require 'markdown_titles_to_svg'
+require 'markdown_titles_to_svg'
 
-    svg = MarkdownTitlesToSvg.single( 
-        'headline',
-        :h1,
-        {}
-    )
+svg = MarkdownTitlesToSvg.single( 
+    'headline',
+    :h1,
+    {}
+)
 ```
 
 
 ### Generate from Github Markdown
 ```ruby
-    require 'markdown_titles_to_svg'
+require 'markdown_titles_to_svg'
 
-    markdowns = [
-        'https://raw.githubusercontent.com/a6b8/a6b8/main/templates/readme.md'
-    ]
+markdowns = [
+    'https://raw.githubusercontent.com/a6b8/a6b8/main/templates/readme.md'
+]
 
-    MarkdownTitlesToSvg.generate( 
-        markdowns,
-        'a6b8',
-        {}
-    )
+MarkdownTitlesToSvg.generate( 
+    markdowns,
+    'a6b8',
+    {}
+)
 ```
+
 <br>
-<br>
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/demo.svg" height="55px" alt="Demo">
+
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/demo.svg" height="38px" alt="Demo">
 
 **A. Implementation**
 > https://raw.githubusercontent.com/a6b8/a6b8/main/README.md
@@ -94,11 +113,9 @@ Headline Generator for ```Github Markdown``` File to generate beautiful ```Googl
 **B. Execution**
 > https://github.com/a6b8/a6b8/blob/main/titles.sh
 
-
-
 <br>
-<br>
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/setup.svg" height="55px" alt="Setup">
+
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/setup.svg" height="38px" alt="Setup">
 
 Add this line to your application's Gemfile:
 
@@ -115,19 +132,19 @@ Or install it yourself as:
     $ gem install markdown_headlines_to_svg
 
 ![](https://ruby-gem-downloads-badge.herokuapp.com/markdown_titles_to_svg?type=total&color=lightgray)
+
 <br>
-<br>
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/process.svg" height="55px" alt="Process">
+
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/process.svg" height="38px" alt="Process">
 
 1. Run Command
 ```txt
-    mds = [ PATH_FILE1, PATH_FILE2 ]
-    markdown_headlines_to_svg.generate(
-        mds,
-        "github_profile_name",
-        options = {}
-    )
-
+mds = [ PATH_FILE1, PATH_FILE2 ]
+markdown_headlines_to_svg.generate(
+    mds,
+    "github_profile_name",
+    options = {}
+)
 ```
 
 2. Prepare (Import) Font
@@ -175,26 +192,27 @@ Or install it yourself as:
 { ...
 
 ```
+
 <br>
-<br>
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/functions.svg" height="55px" alt="Functions">
+
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/functions.svg" height="38px" alt="Functions">
 
 ### .get_options()
 Output all Parameter
 ```ruby
-    MarkdownTitlesToSvg.get_options()
+MarkdownTitlesToSvg.get_options()
 
-    # => { github: { profile: nil, ...
+# => { github: { profile: nil, ...
 ```
 
 ### .generate( [], '', {} )
 Generate and store of Titles in all Files
 ```ruby
-    MarkdownTitlesToSvg.generate(
-        markdowns,
-        'a6b8',
-        {}
-    )
+MarkdownTitlesToSvg.generate(
+    markdowns,
+    'a6b8',
+    {}
+)
 ```
 
 | **Type** | **Required** | **Description** | **Example** | **Description** |
@@ -222,7 +240,8 @@ Generate a single Title and outputs a svg string.
 | **options** | ```Hash``` | No | ```{}``` | Change default options, see "options" for more Information. |
 
 <br>
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/options.svg" height="55px" alt="Options">
+
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/options.svg" height="38px" alt="Options">
 
 ### Github
 | Nr | Name | Key | Default | Type | Description |
@@ -297,32 +316,32 @@ You can find more Information about ```svg``` format here: https://developer.moz
 | E.1. | Silent | :silent | `false` | Boolean | Controll console output. |
 
 <br>
-<br>
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/limitations.svg" height="55px" alt="Limitations">
+
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/limitations.svg" height="38px" alt="Limitations">
 
 - Font Types are limited to '.ttf' and '.otf'. 
 - Read only Markdown Files from Github.
-<br>
+
 <br>
 
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/contributing.svg" height="55px" alt="Contributing">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/contributing.svg" height="38px" alt="Contributing">
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/a6b8/statosio-for-wordpress. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/a6b8/statosio/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/a6b8/markdown-titles-to-svg-for-ruby. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/a6b8/statosio/blob/master/CODE_OF_CONDUCT.md).
+
 <br>
-<br>
-<br>
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/license.svg" height="55px" alt="License">
+
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/license.svg" height="38px" alt="License">
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
 <br>
-<br>
-<br>
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/code-of-conduct.svg" height="55px" alt="Code of Conduct">
+
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/code-of-conduct.svg" height="38px" alt="Code of Conduct">
     
 Everyone interacting in the Statosio project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/a6b8/markdown-titles-to-svg-for-ruby/blob/master/CODE_OF_CONDUCT.md).
+
 <br>
-<br>
-<br>
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/support-my-work.svg" height="55px" alt="Support my Work">
+
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/support-my-work.svg" height="38px" alt="Support my Work">
     
 Donate by [https://www.paypal.com](https://www.paypal.com/donate?hosted_button_id=XKYLQ9FBGC4RG)

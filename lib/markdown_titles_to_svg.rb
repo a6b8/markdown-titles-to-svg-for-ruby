@@ -124,7 +124,6 @@ module MarkdownTitlesToSvg
 
       root = './'
       cmds.each do | cmd |
-        puts cmd
         svg = self.svg_generate( cmd, obj )
         FileUtils.mkdir_p ( File.dirname( cmd[:path] ) )
         File.open( cmd[:path], 'w' ) { | f | f.write( svg ) }
