@@ -256,13 +256,13 @@ MarkdownTitlesToSvg.generate(
 ### .single( [], '', {} )
 Generate a single Title and outputs a svg string.
 ```ruby
-    svg = MarkdownTitlesToSvg.single( 
-        'headline',
-        :h1,
-        {}
-    )
+svg = MarkdownTitlesToSvg.single( 
+    'headline',
+    :h1,
+    {}
+)
 
-    # => <svg ...
+# => <svg ...
 ```
 
 | **Type** | **Required** | **Description** | **Example** | **Description** |
