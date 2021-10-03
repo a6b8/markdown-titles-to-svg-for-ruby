@@ -96,7 +96,7 @@ Headline Generator for ```Github Markdown``` File to generate beautiful ```Googl
 <br>
 
 <a href="#table-of-contents">
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/quickstart.svg" height="38px" alt="Quickstart">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/quickstart.svg" height="38px" alt="Quickstart" name="quickstart">
 </a>
 
 ### Single Title
@@ -129,7 +129,7 @@ MarkdownTitlesToSvg.generate(
 <br>
 
 <a href="#table-of-contents">
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/demo.svg" height="38px" alt="Demo">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/demo.svg" height="38px" alt="Demo" name="demo">
 </a>
 
 **A. Implementation**
@@ -142,7 +142,7 @@ MarkdownTitlesToSvg.generate(
 <br>
 
 <a href="#table-of-contents">
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/setup.svg" height="38px" alt="Setup">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/setup.svg" height="38px" alt="Setup" name="setup">
 </a>
 
 Add this line to your application's Gemfile:
@@ -164,7 +164,7 @@ Or install it yourself as:
 <br>
 
 <a href="#table-of-contents">
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/process.svg" height="38px" alt="Process">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/process.svg" height="38px" alt="Process" name="process">
 </a>
 
 1. Run Command
@@ -226,7 +226,7 @@ markdown_headlines_to_svg.generate(
 <br>
 
 <a href="#table-of-contents">
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/functions.svg" height="38px" alt="Functions">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/functions.svg" height="38px" alt="Functions" name="functions">
 </a>
 
 ### .get_options()
@@ -274,7 +274,7 @@ Generate a single Title and outputs a svg string.
 <br>
 
 <a href="#table-of-contents">
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/options.svg" height="38px" alt="Options">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/options.svg" height="38px" alt="Options" name="options">
 </a>
 
 ### Github
@@ -352,7 +352,7 @@ You can find more Information about ```svg``` format here: https://developer.moz
 <br>
 
 <a href="#table-of-contents">
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/limitations.svg" height="38px" alt="Limitations">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/limitations.svg" height="38px" alt="Limitations" name="limitations">
 </a>
 
 - Font Types are limited to '.ttf' and '.otf'. 
@@ -361,7 +361,7 @@ You can find more Information about ```svg``` format here: https://developer.moz
 <br>
 
 <a href="#table-of-contents">
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/contributing.svg" height="38px" alt="Contributing">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/contributing.svg" height="38px" alt="Contributing" name="contributing">
 </a>
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/a6b8/markdown-titles-to-svg-for-ruby. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/a6b8/statosio/blob/master/CODE_OF_CONDUCT.md).
@@ -369,7 +369,7 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/a6b8/m
 <br>
 
 <a href="#table-of-contents">
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/license.svg" height="38px" alt="License">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/license.svg" height="38px" alt="License" name="license">
 </a>
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
@@ -377,7 +377,7 @@ The gem is available as open source under the terms of the [MIT License](https:/
 <br>
 
 <a href="#table-of-contents">
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/code-of-conduct.svg" height="38px" alt="Code of Conduct">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/code-of-conduct.svg" height="38px" alt="Code of Conduct" name="code-of-conduct">
 </a>
     
 Everyone interacting in the Statosio project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/a6b8/markdown-titles-to-svg-for-ruby/blob/master/CODE_OF_CONDUCT.md).
@@ -385,7 +385,7 @@ Everyone interacting in the Statosio project's codebases, issue trackers, chat r
 <br>
 
 <a href="#table-of-contents">
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/support-my-work.svg" height="38px" alt="Support my Work">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/support-my-work.svg" height="38px" alt="Support my Work" name="support-my-work">
 </a>
     
 Donate by [https://www.paypal.com](https://www.paypal.com/donate?hosted_button_id=XKYLQ9FBGC4RG)
