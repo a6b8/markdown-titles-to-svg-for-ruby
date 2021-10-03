@@ -7,11 +7,11 @@ Headline Generator for ```Github Markdown``` File to generate beautiful ```Googl
 <br>
 
 <a href="#table-of-contents">
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/examples.svg" height="38px" alt="Examples">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/examples.svg" height="38px" alt="Examples" name="examples">
 </a>
 
 <br>
-<a href="#example">
+<a href="#examples">
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/20.svg" height="38px">
 </a>
 
@@ -19,7 +19,7 @@ Headline Generator for ```Github Markdown``` File to generate beautiful ```Googl
 { font__google_fonts__h1__name: "Permanent Marker" }
 ```
 
-<a href="#example">
+<a href="#examples">
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/21.svg" height="38px">
 </a>
 
@@ -27,7 +27,7 @@ Headline Generator for ```Github Markdown``` File to generate beautiful ```Googl
 { font__google_fonts__h1__name: "Playfair Display" }
 ```
 
-<a href="#example">
+<a href="#examples">
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/22.svg" height="38px">
 </a>
 
@@ -35,7 +35,7 @@ Headline Generator for ```Github Markdown``` File to generate beautiful ```Googl
 { font__google_fonts__h1__name: "Roboto Condensed" }
 ```
 
-<a href="#example">
+<a href="#examples">
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/23.svg" height="38px">
 </a>
 
@@ -43,7 +43,7 @@ Headline Generator for ```Github Markdown``` File to generate beautiful ```Googl
 { font__google_fonts__h1__name: "Sarina" }
 ```
 
-<a href="#example">
+<a href="#examples">
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/24.svg" height="38px">
 </a>
 
@@ -51,7 +51,7 @@ Headline Generator for ```Github Markdown``` File to generate beautiful ```Googl
 { font__google_fonts__h1__name: "Sonsie One" }
 ```
 
-<a href="#example">
+<a href="#examples">
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/25.svg" height="38px">
 </a>
 
@@ -59,14 +59,14 @@ Headline Generator for ```Github Markdown``` File to generate beautiful ```Googl
 { font__google_fonts__h1__name: "Trocchi" }
 ```
 
-<a href="#example">
+<a href="#examples">
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/26.svg" height="38px">
 </a>
 
 ```ruby
 { font__google_fonts__h1__name: "UnifrakturMaguntia" }
 ```
-<a href="#example">
+<a href="#examples">
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/examples/27.svg" height="38px">
 </a>
 
