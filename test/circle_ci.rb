@@ -1,4 +1,4 @@
-require '../lib/markdown_titles_to_svg'
+require './lib/markdown_titles_to_svg'
 
 markdowns = [
     'https://raw.githubusercontent.com/a6b8/statosio-for-ruby/main/README.md',
