@@ -1,5 +1,5 @@
 <a href="#table-of-contents">
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/headline.svg" height="45px" alt="Markdown Titles to .svg for Ruby" name="# Markdown Titles to .SVG For Ruby">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/docs/markdown-titles-to-svg-for-ruby/readme/headlines/headlin.svg" height="45px" alt="Markdown Titles to .svg for Ruby" name="# Markdown Titles to .SVG For Ruby">
 </a>
 
 Headline Generator for ```Github Markdown``` File to generate beautiful ```Google Fonts``` Headlines. 
