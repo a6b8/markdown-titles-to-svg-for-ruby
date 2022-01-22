@@ -352,19 +352,19 @@ You can find more Information about ```svg``` format here: https://developer.moz
 <br>
 
 <a href="#table-of-contents">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/assets/headlines/default/contributing.svg" height="45px" alt="Contributing" name="contributing">
+</a>
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/a6b8/markdown-titles-to-svg-for-ruby. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/a6b8/statosio/blob/master/CODE_OF_CONDUCT.md).
+
+<br>
+
+<a href="#table-of-contents">
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/assets/headlines/default/limitations.svg" height="45px" alt="Limitations" name="limitations">
 </a>
 
 - Font Types are limited to '.ttf' and '.otf'. 
 - Read only Markdown Files from Github.
-
-<br>
-
-<a href="#table-of-contents">
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/assets/headlines/default/contributing.svg" height="45px" alt="Contributing" name="contributing">
-</a>
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/a6b8/markdown-titles-to-svg-for-ruby. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/a6b8/statosio/blob/master/CODE_OF_CONDUCT.md).
 
 <br>
 
