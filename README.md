@@ -129,19 +129,6 @@ MarkdownTitlesToSvg.generate(
 <br>
 
 <a href="#table-of-contents">
-<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/assets/headlines/default/demo.svg" height="45px" alt="Demo" name="demo">
-</a>
-
-**A. Implementation**
-> https://raw.githubusercontent.com/a6b8/a6b8/main/README.md
-
-
-**B. Execution**
-> https://github.com/a6b8/a6b8/blob/main/titles.sh
-
-<br>
-
-<a href="#table-of-contents">
 <img src="https://raw.githubusercontent.com/a6b8/a6b8/main/assets/headlines/default/setup.svg" height="45px" alt="Setup" name="setup">
 </a>
 
@@ -160,6 +147,21 @@ Or install it yourself as:
     $ gem install markdown_headlines_to_svg
 
 ![](https://ruby-gem-downloads-badge.herokuapp.com/markdown_titles_to_svg?type=total&color=lightgray)
+
+<br>
+
+<br>
+
+<a href="#table-of-contents">
+<img src="https://raw.githubusercontent.com/a6b8/a6b8/main/assets/headlines/default/demo.svg" height="45px" alt="Demo" name="demo">
+</a>
+
+**A. Implementation**
+> https://raw.githubusercontent.com/a6b8/a6b8/main/README.md
+
+
+**B. Execution**
+> https://github.com/a6b8/a6b8/blob/main/titles.sh
 
 <br>
 
